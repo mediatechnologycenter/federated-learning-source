@@ -48,12 +48,12 @@ The format should be [json-lines](http://jsonlines.org/) (column-names are ignor
     "INTERFACE"
   ]}`
   
-##Test Installation:
+## Test Installation:
 Start Jupiter Notebook (`jupyter notebook`) and navigate to the examples/dummy_example folder. Try to run dummy_example.ipynb.
 
 **The logs are written into `testing.testing.log`**
   
-##Dashboard:
+## Dashboard:
 For the dashboard look into its [documentation](dashboard/README.md)
 
 
