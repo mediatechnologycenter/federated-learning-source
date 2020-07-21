@@ -1,0 +1,44 @@
+version: "2.4"
+services:
+  client_interface:
+    image: mtcpartners/client_interface:0.2
+    ports:
+      - "50050:50050"
+    restart: always
+    mem_limit: 6g
+    networks:
+      - webnet
+    environment:
+      - LOGGING_LEVEL
+      - SERVER_ADDRESS
+      - SERVER_PORT
+      - CLIENT_INTERFACE_PORT
+      - PARTNER_NAME
+      - TESTING
+      - CLIENT_SECRET
+      - SERVER=0
+  node_worker_interface:
+    image: mtcpartners/nodeserver:0.3
+    mem_limit: 6g
+    restart: always
+    networks:
+      - webnet
+    environment:
+      - LOGGING_LEVEL=20
+      - SERVER_ADDRESS=${CLIENT_INTERFACE_SERVER_ADDRESS}
+      - SERVER_PORT=${CLIENT_INTERFACE_PORT}
+      - PARTNER_NAME
+      - CLIENT_SECRET
+      - DATA_SOURCE
+      - STATIC_VARIABLES_FILE_PATH
+      - TESTING
+      - SERVER=0
+      - DP_EPSILON
+      - DP_DELTA
+      - ALLOW_PREPROCESSING
+      - DATA_WRAPPER_URL
+    depends_on:
+      - client_interface
+networks:
+  webnet:
+    name: webnet

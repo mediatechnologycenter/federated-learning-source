@@ -1,0 +1,23 @@
+{
+    "_id" : ObjectId("5def9fffc0544ae50ba8f51d"),
+    "task_name" : "fetch_model",
+    "clients" : {
+        "c1" : {
+            "status" : "done",
+            "result" : {
+                "client" : "c1",
+                "modelName" : "5def9fffc0544ae50ba8f531",
+                "taskId" : "5def9fffc0544ae50ba8f51d"
+            }
+        },
+        "c2" : {
+            "status" : "done",
+            "result" : {
+                "client" : "c2",
+                "modelName" : "5def9fffc0544ae50ba8f531",
+                "taskId" : "5def9fffc0544ae50ba8f51d"
+            }
+        }
+    },
+    "timestamp" : ISODate("2019-12-10T13:39:11.338+0000")
+}

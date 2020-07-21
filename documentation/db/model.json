@@ -1,0 +1,98 @@
+{
+    "_id" : ObjectId("5def9fffc0544ae50ba8f51b"),
+    "model_name" : "test_model",
+    "model_description" : "this model is just to test the db",
+    "is_running" : false,
+    "protocol" : "NN",
+    "model" : {
+        "model" : {
+            "class_name" : "Sequential",
+            "config" : {
+                "name" : "sequential",
+                "layers" : [
+                    {
+                        "class_name" : "Dense",
+                        "config" : {
+                            "name" : "first",
+                            "trainable" : true,
+                            "batch_input_shape" : [
+                                null,
+                                NumberInt(61)
+                            ],
+                            "dtype" : "float32",
+                            "units" : NumberInt(72),
+                            "activation" : "relu",
+                            "use_bias" : true,
+                            "kernel_initializer" : {
+                                "class_name" : "GlorotUniform",
+                                "config" : {
+                                    "seed" : null
+                                }
+                            },
+                            "bias_initializer" : {
+                                "class_name" : "Zeros",
+                                "config" : {
+
+                                }
+                            },
+                            "kernel_regularizer" : null,
+                            "bias_regularizer" : null,
+                            "activity_regularizer" : null,
+                            "kernel_constraint" : null,
+                            "bias_constraint" : null
+                        }
+                    },
+                    {
+                        "class_name" : "Dense",
+                        "config" : {
+                            "name" : "last",
+                            "trainable" : true,
+                            "dtype" : "float32",
+                            "units" : NumberInt(2),
+                            "activation" : "softmax",
+                            "use_bias" : true,
+                            "kernel_initializer" : {
+                                "class_name" : "GlorotUniform",
+                                "config" : {
+                                    "seed" : null
+                                }
+                            },
+                            "bias_initializer" : {
+                                "class_name" : "Zeros",
+                                "config" : {
+
+                                }
+                            },
+                            "kernel_regularizer" : null,
+                            "bias_regularizer" : null,
+                            "activity_regularizer" : null,
+                            "kernel_constraint" : null,
+                            "bias_constraint" : null
+                        }
+                    }
+                ]
+            },
+            "keras_version" : "2.2.4-tf",
+            "backend" : "tensorflow"
+        },
+        "compile" : {
+            "loss" : "sparse_categorical_crossentropy",
+            "metrics" : [
+                "accuracy"
+            ],
+            "optimizer" : {
+                "class_name" : "Adam",
+                "config" : {
+                    "learning_rate" : 0.001,
+                    "decay" : 0.0,
+                    "beta_1" : 0.9,
+                    "beta_2" : 0.999,
+                    "epsilon" : 0.0000001,
+                    "amsgrad" : false
+                }
+            }
+        }
+    },
+    "git_version" : "e9339081b76ad3a89b1862bd38d8af26f0541f1c",
+    "timestamp" : ISODate("2019-12-10T13:39:11.323+0000")
+}

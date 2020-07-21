@@ -1,0 +1,190 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package interface;
+
+// The greeting service definition.
+service InterfaceController {
+    // Sends next task to client
+
+    rpc do_task (InterfaceTaskSubmit) returns (InterfaceDefaultResponse) {
+    }
+
+    rpc get_last_response (InterfaceDefaultRequest) returns (InterfaceStringResponse) {
+    }
+
+    rpc get_models (InterfaceDefaultRequest) returns  (InterfaceStringResponse) {
+    }
+
+    rpc stop_task (InterfaceDefaultRequest) returns (InterfaceDefaultResponse) {
+    }
+
+    rpc get_task_request (TaskRequest) returns (TaskResponse) {
+    }
+
+    rpc fetch_model_request (DefaultRequest) returns (stream Model) {
+    }
+
+    rpc train_model_response (DefaultRequest) returns (DefaultResponse) {
+    }
+
+    rpc send_model_update_response (stream ModelUpdate) returns (DefaultResponse) {
+    }
+    rpc send_datasets (DefaultRequest) returns (DefaultResponse) {
+    }
+    rpc send_validation_loss_response (Loss) returns (DefaultResponse) {
+    }
+    rpc send_train_loss_response (Loss) returns (DefaultResponse) {
+    }
+    rpc send_test_loss_response (Loss) returns (DefaultResponse) {
+    }
+    rpc test_connection (DefaultRequest) returns (DefaultResponse) {
+    }
+
+    // For Node Controller
+    rpc stopped_experiment_response (DefaultRequest) returns (DefaultResponse) {
+    }
+
+    rpc failed_experiment_response (DefaultRequest) returns (DefaultResponse) {
+    }
+
+    rpc stop_experiment (DefaultRequest) returns (ExperimentResponse) {
+    }
+
+    rpc start_experiment (DefaultRequest) returns (ExperimentResponse) {
+    }
+
+    // For Predictor
+    rpc get_latest_global_model (DefaultRequest) returns (ModelIdResponse) {
+    }
+}
+
+message InterfaceStringResponse {
+
+
+    string message = 1;
+    bool ok = 2;
+    string response = 3;
+}
+
+// The request message containing the user's name.
+message InterfaceDefaultRequest {
+
+    string client = 1;
+    string secret = 3;
+    string model_name = 2;
+}
+// The response message containing the greetings
+message InterfaceDefaultResponse {
+    string message = 1;
+    bool ok = 2;
+}
+
+message InterfaceModel {
+    // The name of the feature.
+
+    string client = 1;
+    string secret = 2;
+    string model_name = 3;
+    bytes weights = 4;
+    bytes config = 5;
+
+}
+
+
+message InterfaceTaskSubmit {
+    string client = 1;
+    string secret = 2;
+    string task = 3;
+    string protocol = 4;
+    string model_id = 5;
+}
+
+
+message DefaultResponse {
+    string message = 1;
+    bool ok = 2;
+    string protocol = 3;
+    string conditions = 4;
+
+}
+message TaskResponse {
+    string message = 1;
+    bool ok = 2;
+    string protocol = 3;
+    string task = 5; // name of the task
+    string task_id = 6; // id of the task in the db
+
+}
+
+message ExperimentResponse {
+    string message = 1;
+    bool ok = 2;
+    string protocol = 3;
+    string experiment_id = 4; // json i.e. [<experiment id>,<experiment id>,...]
+}
+
+message Model {
+    string message = 1;
+    bool ok = 2;
+    string protocol = 3;
+    bytes model_parameters = 6; // json dump of file data
+    bytes model_definition = 7; // json dump of db data
+
+}
+message ModelIdResponse {
+    string message = 1;
+    bool ok = 2;
+    string protocol = 3;
+    string model_id = 4; // [<model_metadata>, <model_metadata>,....]
+}
+
+// server requests
+message TaskRequest {
+    string client = 1;
+    string secret = 2;
+    string protocol = 3;
+    string experiment_id = 4;
+}
+message Loss {
+
+    string client = 1;
+    string secret = 2;
+    string protocol = 3;
+    string experiment_id = 4;
+    string task_id = 5;
+    string loss = 6; // json i.e [<loss>,<metric>,<metric>,...]
+}
+
+message DefaultRequest {
+    string client = 1;
+    string secret = 2;
+    string protocol = 3;
+    string experiment_id = 4; // either experiment_id or model_id must be set
+    string model_id = 5;
+    string task_id = 6;
+
+}
+message ModelUpdate {
+    string client = 1;
+    string secret = 2;
+    string protocol = 3;
+    string experiment_id = 4;
+    string task_id = 5;
+    bytes model_update = 6;
+
+
+}

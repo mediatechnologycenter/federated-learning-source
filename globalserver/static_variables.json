@@ -1,0 +1,39 @@
+{
+  "VALID_TASKS": [
+    "fetch_model",
+    "train_model",
+    "send_model",
+    "send_validation_loss",
+    "send_training_loss",
+    "send_test_loss",
+    "stop"
+  ],
+  "VALID_SERVER_TASKS": [
+    "aggregate"
+  ],
+  "QUEUE_PATH": "../db/task_queues/",
+  "LOCAL_MODELS_PATH": "../db/local_model_updates/",
+  "GLOBAL_MODELS_PATH": "../db/global_models/",
+  "BACKUP_PATH": "../db/backup/",
+  "CHECK_IDLE_SLEEP": 1,
+  "STOP_WORD": "stop",
+  "GLOBAL_MODEL_CONFIG": "global_model_config",
+  "GLOBAL_MODEL_WEIGHTS": "global_model_weights",
+  "LOAD_QUEUE_ATTEMPTS": 10,
+  "WORKER_CLIENT_NAME": "INTERFACE",
+  "MAX_WORKERS": 10,
+  "MODEL_BASE": "base",
+  "SLEEP_ON_ERROR": 60,
+  "GRPC_CONNECTION_RETRY_DELAY": 1,
+  "GRPC_CONNECTION_RETRIES": 2,
+  "GRPC_TIMEOUT": 600,
+  "WORKER_IDLE_SLEEP": 1,
+  "AGGREGATE_TASK": "aggregate",
+  "TASK_DONE": "done",
+  "NOT_SCHEDULED_STOPWORD": "not_scheduled",
+  "SCHEDULED_STOPWORD": "scheduled",
+  "DB_CONFIG_FILE":"../db_conf.key",
+  "AGGREGATOR_NAME": "aggregator",
+  "DEFAULT_GLOBAL_SERVER_PATH":"api/",
+  "BACKUP_ALL_INBETWEEN_MODELS": 0
+}

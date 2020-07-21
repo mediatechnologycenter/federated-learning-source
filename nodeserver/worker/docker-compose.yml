@@ -1,0 +1,27 @@
+version: "2.4"
+services:
+  node_worker:
+    image: mtcpartners/nodeserver:0.6
+#    restart: always
+    mem_limit: 6g
+    networks:
+      - webnet
+    environment:
+      - LOGGING_LEVEL=20
+      - SERVER_ADDRESS
+      - SERVER_PORT
+      - PARTNER_NAME
+      - CLIENT_SECRET
+      - DATA_SOURCE
+      - STATIC_VARIABLES_FILE_PATH
+      - TESTING
+      - DP_EPSILON
+      - DP_DELTA
+#      - GRPC_VERBOSITY=debug
+#      - GRPC_TRACE=all
+      - ALLOW_PREPROCESSING
+      - DATA_WRAPPER_URL
+
+networks:
+  webnet:
+    name: webnet

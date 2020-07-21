@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  data_wrapper:
+    image: mtcpartners/dummy_data_wrapper:0.3
+    restart: always
+    ports:
+       - "80:80"
+    mem_limit: 8g
+    networks:
+      - webnet
+    environment:
+      - LOGGING_LEVEL=20
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+networks:
+  webnet:
+    name: webnet

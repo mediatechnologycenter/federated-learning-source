@@ -1,0 +1,145 @@
+{
+    "_id" : ObjectId("5def9fffc0544ae50ba8f531"),
+    "start_model_id" : ObjectId("5def9fffc0544ae50ba8f51b"),
+    "experiment_state_model_id" : ObjectId("5def9fffc0544ae50ba8f51c"),
+    "training_config" : {
+        "epochs" : NumberInt(1),
+        "verbose" : NumberInt(1),
+        "batch_size" : NumberInt(8192),
+        "validation_steps" : NumberInt(20),
+        "steps_per_epoch" : NumberInt(10)
+    },
+    "task_list" : [
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f51d"),
+            "task_order" : NumberInt(0),
+            "task_name" : "fetch_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f51e"),
+            "task_order" : NumberInt(1),
+            "task_name" : "train_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f51f"),
+            "task_order" : NumberInt(2),
+            "task_name" : "send_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f520"),
+            "task_order" : NumberInt(3),
+            "task_name" : "send_loss",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f521"),
+            "task_order" : NumberInt(4),
+            "task_name" : "aggregate",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f522"),
+            "task_order" : NumberInt(5),
+            "task_name" : "fetch_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f523"),
+            "task_order" : NumberInt(6),
+            "task_name" : "train_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f524"),
+            "task_order" : NumberInt(7),
+            "task_name" : "send_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f525"),
+            "task_order" : NumberInt(8),
+            "task_name" : "send_loss",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f526"),
+            "task_order" : NumberInt(9),
+            "task_name" : "aggregate",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f527"),
+            "task_order" : NumberInt(10),
+            "task_name" : "fetch_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f528"),
+            "task_order" : NumberInt(11),
+            "task_name" : "train_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f529"),
+            "task_order" : NumberInt(12),
+            "task_name" : "send_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52a"),
+            "task_order" : NumberInt(13),
+            "task_name" : "send_loss",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52b"),
+            "task_order" : NumberInt(14),
+            "task_name" : "aggregate",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52c"),
+            "task_order" : NumberInt(15),
+            "task_name" : "fetch_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52d"),
+            "task_order" : NumberInt(16),
+            "task_name" : "train_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52e"),
+            "task_order" : NumberInt(17),
+            "task_name" : "send_model",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f52f"),
+            "task_order" : NumberInt(18),
+            "task_name" : "send_loss",
+            "task_status" : "done"
+        },
+        {
+            "task_id" : ObjectId("5def9fffc0544ae50ba8f530"),
+            "task_order" : NumberInt(19),
+            "task_name" : "aggregate",
+            "task_status" : "done"
+        }
+    ],
+    "clients" : [
+        "c1",
+        "c2"
+    ],
+    "git_version" : "e9339081b76ad3a89b1862bd38d8af26f0541f1c",
+    "protocol" : "NN",
+    "is_running" : false,
+    "experiment_description" : "this is a test experiment",
+    "experiment_name" : "test_experiment",
+    "timestamp" : ISODate("2019-12-10T13:39:11.352+0000"),
+    "is_finished" : true
+}

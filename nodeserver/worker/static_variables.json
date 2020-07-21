@@ -1,0 +1,26 @@
+{
+  "VALID_TASKS": [
+    "fetch_model",
+    "train_model",
+    "send_model",
+    "send_validation_loss",
+    "send_training_loss",
+    "send_test_loss",
+    "stop"
+  ],
+  "CHECK_IDLE_SLEEP": 1,
+  "STOP_TASK": "stop",
+  "SLEEP_ON_ERROR": 360,
+  "GRPC_CONNECTION_RETRY_DELAY": 1,
+  "GRPC_CONNECTION_RETRIES": 8,
+  "GRPC_TIMEOUT": 20,
+  "WORKER_IDLE_SLEEP": 3,
+  "WORKER_BUSY_SLEEP": 1,
+  "TASK_TRIALS": 5,
+  "TASK_ERROR_SLEEP": 60,
+  "CONTROLLER_IDLE_SLEEP": 3,
+  "PERDICTOR_IDLE_SLEEP": 300,
+  "TASK_CONTROLLER_IDLE_TIME": 3,
+  "MAX_MEMORY_USAGE":10737418240
+}
+
