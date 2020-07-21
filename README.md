@@ -59,7 +59,7 @@ For the dashboard look into its [documentation](dashboard/README.md)
 
 
 ## Run
-###Toyexamples:
+### Toyexamples:
 All the examples start the global server and nodes automatically. To shut them down run `shutdown.sh` or use the Testing class described below.
 * NN Basic Example: Run `python3 examples/operator_example.py` in the root directory of the repository.
 * NN Setupdict: Run `python3 examples/operator_example_setupdict.py` in the root directory of the repository.
@@ -73,7 +73,7 @@ All the examples start the global server and nodes automatically. To shut them d
 
 **The logs are written into `testing.testing.log`**
 
-###Usage description
+### Usage description
 #### Testing Class
 We constructed a helper class for running experiments locally `class Testing in testing/test_class.py`.
 Whenever you use this class, make sure that your current working dir is the root directory and that the root directory is in the sys path (see examples on how to do that).
