@@ -1,3 +1,5 @@
+Our framework allows a low number of stakeholders to train a model in a federated way. It is easy to setup for the stakeholders as well as for the orchistrator. It incorperates three types of algorithms: standard federated averaging via neural networks and two novel tree based federated learning approaches. The stakeholders control the amount on differential privacy they want to ensure. The algorithms are based on these papers [[1]](#1).
+
 # Documentation
 Look into the [documentation](documentation/README.md) for detailed description of the pipeline.
 
@@ -6,6 +8,7 @@ Global Server and nodes run locally. The files in the Github repository are used
 
 ## Installation
 1. Install [Mongodb](https://docs.mongodb.com/manual/installation/)
+
     2. Start Daemon (`mongod --port <your_port> --dbpath /home/schneech/mongodb  --replSet rs0`)
     3. Open a mongo shell (`mongo --port <your_port>`) and initialize Replica set in mongo shell with `rs.initiate(`)
     4. [Enable Access Control](https://docs.mongodb.com/manual/tutorial/enable-authentication/): In the mongo shell:
@@ -40,7 +43,7 @@ The format should be [json-lines](http://jsonlines.org/) (column-names are ignor
 "CLIENT_INTERFACE_PORT" :"optional - needed if run with client interface",
 "DATA_WRAPPER_URL":"optional - needed if run in docker mode"}`
 
-13. Add a file `valid_clients.json` in the globalserver directory. Specifies the allowed clients in docker mode. For local setup, just copy the dummy entries below.
+Add a file `valid_clients.json` in the globalserver directory. Specifies the allowed clients in docker mode. For local setup, just copy the dummy entries below.
 
 `{ "VALID_CLIENTS": [
     "Clientname1",
@@ -173,3 +176,9 @@ We implemented three Algorithms: Neural Networks (NN), Peer2Peer XGBoost (P2P) a
 # Production Pipeline
 Global Server runs on server and nodes run on clients as Docker containers fetch from the docker hub.
 
+
+## References
+
+<a id="1">[1]</a>
+Keith Bonawitz, Hubert Eichner, Wolfgang Grieskamp, Dzmitry Huba, Alex Ingerman, Vladimir Ivanov, Chloe Kiddon, Jakub Konečný, Stefano Mazzocchi, H. Brendan McMahan, Timon Van Overveldt, David Petrou, Daniel Ramage, Jason Roselander. Towards Federated Learning at Scale: System Design
+https://arxiv.org/abs/1902.01046
