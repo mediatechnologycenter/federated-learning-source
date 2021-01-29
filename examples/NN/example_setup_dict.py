@@ -134,8 +134,8 @@ clients = [f"kkbox{i}" for i in range(2)]
 
 TestSetup = Testing(clients, start_servers=True, clear_logs=True, clear_db=False, interface=False)
 
-# train, test = get_data_kdd()
-# split_half(train, test, clients)
+train, test = get_data_kdd()
+split_half(train, test, clients)
 
 setup_dict = {"model_function": {
     "function": kknox_nn,

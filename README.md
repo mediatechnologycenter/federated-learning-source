@@ -180,5 +180,5 @@ Global Server runs on server and nodes run on clients as Docker containers fetch
 ## References
 
 <a id="1">[1]</a>
-Keith Bonawitz, Hubert Eichner, Wolfgang Grieskamp, Dzmitry Huba, Alex Ingerman, Vladimir Ivanov, Chloe Kiddon, Jakub Konečný, Stefano Mazzocchi, H. Brendan McMahan, Timon Van Overveldt, David Petrou, Daniel Ramage, Jason Roselander. Towards Federated Learning at Scale: System Design
+Keith Bonawitz, Hubert Eichner, Wolfgang Grieskamp, Dzmitry Huba, Alex Ingerman, Vladimir Ivanov, Chloe Kiddon, Jakub Kone?ný, Stefano Mazzocchi, H. Brendan McMahan, Timon Van Overveldt, David Petrou, Daniel Ramage, Jason Roselander. Towards Federated Learning at Scale: System Design
 https://arxiv.org/abs/1902.01046

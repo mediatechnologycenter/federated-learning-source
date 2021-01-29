@@ -6,10 +6,7 @@
 *.key
 globalserver/db
 datasets
-results
 app_data
 globalserver/utils/__pycache__
 nodeserver/worker/utils/__pycache__
-/results/
 /examples/testing/
-/testing/

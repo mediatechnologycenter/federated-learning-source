@@ -39,7 +39,7 @@ import json
 from globalserver.operator_.utils import operator_utils
 
 # Define the Clients name (these are the same as you used in startup.sh script)
-
+clients = ['c1', 'c2']
 
 # Setting up all the components
 operator = Operator()
